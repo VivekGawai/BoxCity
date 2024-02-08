@@ -1,0 +1,852 @@
+{
+	"folders": [
+		{
+			"name": "BoxCity",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/Users/Shared/Epic Games/UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp",
+			"vadimcn.vscode-lldb",
+			"ms-vscode.mono-debug",
+			"dfarley1.file-picker"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "BoxCity Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Debug",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Debug",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Debug",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"DebugGame",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"DebugGame",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"DebugGame",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Development",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Development",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Development",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Test",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Test",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity Mac Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Test",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Shipping",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Shipping",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity Mac Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity Mac Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"Mac",
+					"Shipping",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Debug",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Debug",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity IOS Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Debug",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"DebugGame",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"DebugGame",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity IOS DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"DebugGame",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Development",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Development",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity IOS Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Development",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Test",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Test",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity IOS Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Test",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Shipping",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Shipping",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCity IOS Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCity IOS Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCity",
+					"IOS",
+					"Shipping",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCityEditor Mac Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCityEditor",
+					"Mac",
+					"Debug",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCityEditor Mac Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCityEditor",
+					"Mac",
+					"Debug",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCityEditor Mac Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCityEditor Mac Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCityEditor",
+					"Mac",
+					"Debug",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCityEditor Mac DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCityEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCityEditor Mac DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCityEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCityEditor Mac DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCityEditor Mac DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCityEditor",
+					"Mac",
+					"DebugGame",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCityEditor Mac Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCityEditor",
+					"Mac",
+					"Development",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCityEditor Mac Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCityEditor",
+					"Mac",
+					"Development",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"BoxCityEditor Mac Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			},
+			{
+				"label": "BoxCityEditor Mac Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Mac/Build.sh",
+				"args": [
+					"BoxCityEditor",
+					"Mac",
+					"Development",
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/Users/Shared/Epic Games/UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch BoxCity (Debug)",
+				"request": "launch",
+				"program": "/Users/vivekgawai/Documents/Unreal Projects/BoxCity/Binaries/Mac/UnrealGame-Mac-Debug.app/Contents/MacOS/UnrealGame-Mac-Debug",
+				"preLaunchTask": "BoxCity Mac Debug Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch BoxCity (DebugGame)",
+				"request": "launch",
+				"program": "/Users/vivekgawai/Documents/Unreal Projects/BoxCity/Binaries/Mac/UnrealGame-Mac-DebugGame.app/Contents/MacOS/UnrealGame-Mac-DebugGame",
+				"preLaunchTask": "BoxCity Mac DebugGame Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch BoxCity (Development)",
+				"request": "launch",
+				"program": "/Users/vivekgawai/Documents/Unreal Projects/BoxCity/Binaries/Mac/UnrealGame.app/Contents/MacOS/UnrealGame",
+				"preLaunchTask": "BoxCity Mac Development Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch BoxCity (Test)",
+				"request": "launch",
+				"program": "/Users/vivekgawai/Documents/Unreal Projects/BoxCity/Binaries/Mac/UnrealGame-Mac-Test.app/Contents/MacOS/UnrealGame-Mac-Test",
+				"preLaunchTask": "BoxCity Mac Test Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch BoxCity (Shipping)",
+				"request": "launch",
+				"program": "/Users/vivekgawai/Documents/Unreal Projects/BoxCity/Binaries/Mac/UnrealGame-Mac-Shipping.app/Contents/MacOS/UnrealGame-Mac-Shipping",
+				"preLaunchTask": "BoxCity Mac Shipping Build",
+				"args": [
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch BoxCityEditor (Debug)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-Debug.app/Contents/MacOS/UnrealEditor-Mac-Debug",
+				"preLaunchTask": "BoxCityEditor Mac Debug Build",
+				"args": [
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch BoxCityEditor (DebugGame)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor-Mac-DebugGame.app/Contents/MacOS/UnrealEditor-Mac-DebugGame",
+				"preLaunchTask": "BoxCityEditor Mac DebugGame Build",
+				"args": [
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Launch BoxCityEditor (Development)",
+				"request": "launch",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Binaries/Mac/UnrealEditor.app/Contents/MacOS/UnrealEditor",
+				"preLaunchTask": "BoxCityEditor Mac Development Build",
+				"args": [
+					"/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject"
+				],
+				"cwd": "/Users/Shared/Epic Games/UE_5.3",
+				"type": "lldb"
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Mac Development Build",
+				"program": "/Users/Shared/Epic Games/UE_5.3/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/Users/vivekgawai/Documents/Unreal Projects/BoxCity/BoxCity.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/Users/Shared/Epic Games/UE_5.3"
+			}
+		]
+	}
+}
